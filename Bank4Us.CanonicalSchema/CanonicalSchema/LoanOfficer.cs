@@ -1,10 +1,14 @@
-﻿using System;
+﻿
+using Bank4Us.Common.Core;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bank4Us.CanonicalSchema
+namespace Bank4Us.Common.CanonicalSchema
 {
     /// <summary>
     ///   Course Name: COSC 6360 Enterprise Architecture
@@ -13,11 +17,17 @@ namespace Bank4Us.CanonicalSchema
     ///   Description: The Loan Officer manages multiple Mortgages (One-to-Many) and 
     ///   serves multiples Mortgage Applicants (One-to-Many).                
     /// </summary>
-    public class LoanOfficer: Person
+    public class LoanOfficer : BaseEntity
     {
+        [Key]
         public int OfficerId { get; set; }
+
+        public Person Person { get; set; }
+
+        [MaxLength(50)]
         public string Title { get; set; }
-        public List<MortgageApplicant>  MortgageApplicants { get; set; }
+      
         public List<Mortgage> Mortgages { get; set; }
+       
     }
 }

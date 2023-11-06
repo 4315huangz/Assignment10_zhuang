@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Bank4Us.Common.CanonicalSchema.CreditReport">
+    <Position X="8.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAASAAAAAAAAAAAAAAAAAAAAAAACCAAAAAAAAAAAA=</HashCode>
+      <FileName>CanonicalSchema\CreditReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bank4Us.Common.CanonicalSchema.LoanOfficer">
+    <Position X="1" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAEAAAAAAIAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CanonicalSchema\LoanOfficer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Person" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Mortgages" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Bank4Us.Common.CanonicalSchema.Mortgage">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAABAAAAAAAAAAAAAAAABAEAEAAAAAgACAAAAAAAA=</HashCode>
+      <FileName>CanonicalSchema\Mortgage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bank4Us.Common.CanonicalSchema.MortgageApplicant">
+    <Position X="7.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAABAAIAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>CanonicalSchema\MortgageApplicant.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Person" />
+      <Property Name="CreditReport" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Mortgages" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Bank4Us.Common.CanonicalSchema.Person">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAAAAAAAACAAAAAQAQAAAAAAAACAAAAAgAAAAg=</HashCode>
+      <FileName>CanonicalSchema\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
