@@ -13,7 +13,7 @@ namespace Bank4Us.Common.Facade
     ///   Description: Example implementation of Entity Framework Core.
     ///                 http://www.entityframeworktutorial.net/efcore/entity-framework-core.aspx  
     /// </summary>
-    internal class LoggingEvents
+    public class LoggingEvents
     {
         public const int GET_ITEM = 1001;
         public const int GET_ITEMS = 1002;

@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Bank4Us.Common.CanonicalSchema
 {
@@ -19,9 +20,10 @@ namespace Bank4Us.Common.CanonicalSchema
     /// </summary>
     public class MortgageApplicant : BaseEntity
     {
+        [JsonIgnore]
         [Key]
         public int ApplicantID { get; set; }
-       
+
         public Person Person { get; set; }
 
         public CreditReport CreditReport { get; set; }

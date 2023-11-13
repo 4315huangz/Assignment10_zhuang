@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Bank4Us.Common.CanonicalSchema
 {
@@ -17,6 +18,7 @@ namespace Bank4Us.Common.CanonicalSchema
     /// </summary>
     public class Mortgage : BaseEntity
     {
+        [JsonIgnore]
         [Key]
         public int MortgageId { get; set; }
 
@@ -26,8 +28,19 @@ namespace Bank4Us.Common.CanonicalSchema
         public int LoanTerm { get; set; }
         public double InterestRate { get; set; }
         public double MonthlyPayment { get; set; }
-        public bool ApproveStatus { get; set; }
+        [JsonIgnore]
+        public int Status { get; set; }
+        public void UpdateMortgageStatus(MortgageStatus acStat)
+        {
+            Status = (int)acStat;
+        }
 
+        public enum MortgageStatus
+        {
+            Approved = 1,
+            Reviewing = 2,
+            Declined = 3
+        }
 
 
     }

@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Bank4Us.Common.CanonicalSchema
 {
@@ -16,6 +17,7 @@ namespace Bank4Us.Common.CanonicalSchema
     /// </summary>
     public class CreditReport : BaseEntity
     {
+        [JsonIgnore]
         [Key]
         public int ReportID { get; set; }
         

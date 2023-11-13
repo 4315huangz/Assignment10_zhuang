@@ -1,4 +1,5 @@
 ﻿using Bank4Us.Common.Core;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -18,9 +19,10 @@ namespace Bank4Us.Common.CanonicalSchema
     /// </summary>
     public class Person : BaseEntity
     {
+        [JsonIgnore]
         [Key]
         public int Id { get; set; }
-        public int SSN { get; set; }
+        public String SSN { get; set; }
         [MaxLength(255)]
         public string FirstName { get; set; }
         [MaxLength(255)]

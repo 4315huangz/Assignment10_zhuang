@@ -13,7 +13,7 @@ namespace Bank4Us.Common.Facade
     ///   Description: Example implementation of Entity Framework Core.
     ///                 http://www.entityframeworktutorial.net/efcore/entity-framework-core.aspx  
     /// </summary>
-    internal class LoggerHelper
+    public class LoggerHelper
     {
         public static string GetExceptionDetails(Exception ex)
         {

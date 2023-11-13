@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Bank4Us.Common.CanonicalSchema.CreditReport">
-    <Position X="8.75" Y="3.75" Width="1.5" />
+    <Position X="6.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAASAAAAAAAAAAAAAAAAAAAAAAACCAAAAAAAAAAAA=</HashCode>
       <FileName>CanonicalSchema\CreditReport.cs</FileName>
@@ -22,8 +22,15 @@
   </Class>
   <Class Name="Bank4Us.Common.CanonicalSchema.Mortgage">
     <Position X="4" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Bank4Us.Common.CanonicalSchema.Mortgage.MortgageStatus" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CanonicalSchema\Mortgage.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AEAAABAAAAAAAAAAAAAAAABAEAEAAAAAgACAAAAAAAA=</HashCode>
+      <HashCode>AEAAABAEAAAAAAAAAAAAEAAAEAEAAAAAgACAAAAAAAA=</HashCode>
       <FileName>CanonicalSchema\Mortgage.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -42,9 +49,9 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Bank4Us.Common.CanonicalSchema.Person">
-    <Position X="4" Y="3.5" Width="1.5" />
+    <Position X="3.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAEAAAAAAAACAAAAAQAQAAAAAAAACAAAAAgAAAAg=</HashCode>
+      <HashCode>EAACAEAAAAAAAACAAAAAQAQAAAAAAAACAAAAAgAAAAg=</HashCode>
       <FileName>CanonicalSchema\Person.cs</FileName>
     </TypeIdentifier>
   </Class>
