@@ -81,7 +81,7 @@ namespace Bank4Us.ServiceApp.Controllers
 
         [TransactionActionFilter()]
         [HttpPost]
-        public IActionResult Post(Mortgage mortgage)
+        public IActionResult Post([FromBody] Mortgage mortgage)
         {
             try
             {
