@@ -27,12 +27,15 @@ namespace Bank4Us.DataAccess.Core
         {
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseSqlServer(@"Server=tcp:bankforus-server.database.windows.net,1433;
-                                        Database=Bank4Us_Assignment9;
-                                        Persist Security Info=False;
-                                        User ID=Bank4UsAdmin;
-                                        Password=Sp@150725;MultipleActiveResultSets=False;
-                                        Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
-                                        ");
+                                            Initial Catalog=Bank4Us_Assignment9;
+                                            Persist Security Info=False;
+                                            User ID=Bank4UsAdmin;
+                                            Password=Sp@150725;
+                                            MultipleActiveResultSets=False;
+                                            Encrypt=True;
+                                            TrustServerCertificate=False;
+                                            Connection Timeout=30;");
+
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {

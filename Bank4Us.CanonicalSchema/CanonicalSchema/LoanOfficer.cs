@@ -20,7 +20,7 @@ namespace Bank4Us.Common.CanonicalSchema
     /// </summary>
     public class LoanOfficer : BaseEntity
     {
-        [JsonIgnore]
+        //[JsonIgnore]
         [Key]
         public int OfficerId { get; set; }
 

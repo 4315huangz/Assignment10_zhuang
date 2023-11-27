@@ -17,7 +17,7 @@ namespace Bank4Us.Common.CanonicalSchema
     /// </summary>
     public class CreditReport : BaseEntity
     {
-        [JsonIgnore]
+        //[JsonIgnore]
         [Key]
         public int ReportID { get; set; }
         

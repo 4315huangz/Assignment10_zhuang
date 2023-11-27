@@ -24,7 +24,7 @@ namespace Bank4Us.BusinessLayer.Rules
             //REMARK: Remove mortgage action, then notify user.  
             Then()
                 .Do(ctx => applicant.Mortgages.Clear())
-                .Do(ctx => ctx.Update(applicant)) //<--INFO: Must call the rule context update to forward chain.
+                //.Do(ctx => ctx.Update(applicant)) //<--INFO: Must call the rule context update to forward chain.
                 .Do(ctx => applicant.BusinessRuleNotifications.Add("A mortgage applicant must be at least 18 to apply for a mortgage."));
         }
     }

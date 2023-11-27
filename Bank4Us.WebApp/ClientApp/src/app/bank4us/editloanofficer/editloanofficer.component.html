@@ -1,0 +1,56 @@
+<h1>Bank4Us</h1>
+<div>
+  <h2>Edit Loan Officer</h2>
+  <form (ngSubmit)="onSubmit()" *ngIf="editLoanOfficer" [formGroup]="editForm" ngNativeValidate>
+
+    <div>
+      <label for="officerId">Loan Officer Id:</label>
+      <input disabled formControlName="officerId" placeholder="Loan Officer Id" name="officerId" id="officerId" class="form-control" style="width:100px">
+    </div>
+
+    <div>
+      *<label for="ssn">SSN:</label>
+      <input required formControlName="ssn" placeholder="SSN" name="ssn" id="ssn" class="form-control" style="width:250px">
+    </div>
+
+    <div>
+      *<label for="firstName">First Name:</label>
+      <input required formControlName="firstName" placeholder="First Name" name="firstName" id="firstName" class="form-control" style="width:250px">
+    </div>
+
+    <div>
+      *<label for="lastName">Last Name:</label>
+      <input required formControlName="lastName" placeholder="Last Name" name="lastName" id="lastName" class="form-control" style="width:250px">
+    </div>
+
+    <div>
+      <label for="address">Address:</label>
+      <input formControlName="address" placeholder="Address" name="address" id="address" class="form-control" style="width:250px">
+    </div>
+
+    <div>
+      <label for="gender">Gender:</label>
+      <input formControlName="gender" placeholder="Gender" name="gender" id="gender" class="form-control" style="width:250px">
+    </div>
+
+    <div>
+      *<label for="birthDate">Birthdate:</label>
+      <input required formControlName="birthDate" placeholder="Birthdate" name="birthDate" id="birthDate" class="form-control" style="width:250px">
+    </div>
+    <div>
+      <label for="email">Email address:</label>
+      <input type="email" formControlName="email" placeholder="Email" name="email" id="email" class="form-control" style="width:250px">
+    </div>
+
+    <div>
+      <label for="phoneNumber">Phone Number:</label>
+      <input formControlName="phoneNumber" placeholder="Phone Number" name="phoneNumber" id="phoneNumber" class="form-control" style="width:250px">
+    </div>
+    <p></p>
+    <div>
+      <label name="rulemessages" id="rulemessages" style="color:red"></label>
+    </div>
+    <p></p>
+    <button type="submit">Update Mortgage Applicant</button>
+  </form>
+</div>

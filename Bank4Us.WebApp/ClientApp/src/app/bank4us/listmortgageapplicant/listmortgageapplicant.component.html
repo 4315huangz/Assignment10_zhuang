@@ -1,0 +1,32 @@
+<h1>Bank4Us Mortgage Applicants</h1>
+
+<p>This component demonstrates fetching data from the Bank4Us ServiceApp.</p>
+<p *ngIf="!mortgageapplicants"><em>Loading...</em></p>
+
+<table class='table' *ngIf="mortgageapplicants">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>SSN</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Address</th>
+      <th>Gender</th>
+      <th>Birthdate</th>
+      <th>EmailAddress</th>
+      <th>PhoneNumber</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let mortgageapplicant of mortgageapplicants">
+      <td>{{ mortgageapplicant.id }}</td>
+      <td><a href="/editmortgageapplicant?applicantId={{ mortgageapplicant.id }}">{{ mortgageapplicant.firstName }}</a></td>
+      <td>{{ mortgageapplicant.lastName }}</td>
+      <td>{{ mortgageapplicant.address }}</td>
+      <td>{{ mortgageapplicant.gender }}</td>
+      <td>{{ mortgageapplicant.birthdate }}</td>
+      <td>{{ mortgageapplicant.emailAddress }}</td>
+      <td>{{ mortgageapplicant.phoneNumber }}</td>
+    </tr>
+  </tbody>
+</table>

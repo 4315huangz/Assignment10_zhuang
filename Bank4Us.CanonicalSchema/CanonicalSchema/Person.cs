@@ -19,7 +19,7 @@ namespace Bank4Us.Common.CanonicalSchema
     /// </summary>
     public class Person : BaseEntity
     {
-        [JsonIgnore]
+        //[JsonIgnore]
         [Key]
         public int Id { get; set; }
         public String SSN { get; set; }

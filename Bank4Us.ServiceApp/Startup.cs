@@ -16,7 +16,6 @@ using NRules;
 using NRules.Fluent;
 using Microsoft.OpenApi.Models;
 
-
 namespace Bank4Us.ServiceApp
 {
     /// <summary>
@@ -25,7 +24,6 @@ namespace Bank4Us.ServiceApp
     ///   Name: Ziwei Huang
     ///   Description: Example implementation of a Service App with MVC           
     /// </summary>
-    /// 
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -39,6 +37,16 @@ namespace Bank4Us.ServiceApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Enable Cross-Origin Requests (CORS) in ASP.NET Core
+            //https://learn.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-6.0
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+            });
+
             //INFO: BRE example implementation.  
             // https://github.com/NRules/NRules/wiki/Getting-Started
             var ruleset = new RuleRepository();
@@ -64,6 +72,9 @@ namespace Bank4Us.ServiceApp
             services.AddSingleton<ISession>(businessRulesEngine);
             services.AddScoped<IMortgageApplicantManager, MortgageApplicantManager>();
             services.AddScoped<IMortgageManager, MortgageManager>();
+            services.AddScoped<ILoanOfficerManager, LoanOfficerManager>();
+            services.AddScoped<ICreditReportManager, CreditReportManager>();
+            services.AddScoped<IPersonManager, PersonManager>();
             services.AddScoped<BusinessManagerFactory>();
 
             services.AddMvc(option => option.EnableEndpointRouting = false)
@@ -95,6 +106,9 @@ namespace Bank4Us.ServiceApp
                        .AddConsole();
                                             }
             );
+            // Enable Cross-Origin Requests (CORS) in ASP.NET Core
+            //https://learn.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-6.0
+            app.UseCors("CorsPolicy");
 
             if (env.IsDevelopment())
             {

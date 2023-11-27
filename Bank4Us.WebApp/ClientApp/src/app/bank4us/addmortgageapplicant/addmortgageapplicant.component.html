@@ -1,0 +1,93 @@
+<h1>Bank4Us</h1>
+<div>
+  <h2>Add Mortgage Component</h2>
+  <form (ngSubmit)="onSubmit()" [formGroup]="addForm" ngNativeValidate>
+    <table width="100%">
+      <tr>
+        <td>
+          <div>
+            *<label for="ssn">SSN:</label>
+            <input required formControlName="ssn" placeholder="SSN" name="ssn" id="ssn" class="form-control" style="width:250px">
+          </div>
+
+          <div>
+            *<label for="firstName">First Name:</label>
+            <input required formControlName="firstName" placeholder="First Name" name="firstName" id="firstName" class="form-control" style="width:250px">
+          </div>
+
+          <div>
+            *<label for="lastName">Last Name:</label>
+            <input required formControlName="lastName" placeholder="Last name" name="lastName" id="lastName" class="form-control" style="width:250px">
+          </div>
+
+          <div>
+            <label for="address">Address:</label>
+            <input formControlName="address" placeholder="Address" name="address" id="address" class="form-control" style="width:250px">
+          </div>
+
+          <div>
+            <label for="gender">Gender:</label>
+            <input formControlName="gender" placeholder="Gender" name="gender" id="gender" class="form-control" style="width:250px">
+          </div>
+
+          <div>
+            *<label for="birthDate">Birthdate:</label>
+            <input required formControlName="birthDate" placeholder="Birthdate" name="birthDate" id="birthDate" class="form-control" style="width:250px">
+          </div>
+
+          <div>
+            <label for="email">Email address:</label>
+            <input type="email" formControlName="email" placeholder="Email" name="email" id="email" class="form-control" style="width:250px">
+          </div>
+
+          <div>
+            <label for="phoneNumber">Phone Number:</label>
+            <input formControlName="phoneNumber" placeholder="Phone Number" name="phoneNumber" id="phoneNumber" class="form-control" style="width:250px">
+          </div>
+          <p></p>
+          <button type="submit">Create Mortgage Applicant</button>
+        </td>
+        <td>
+          <div>
+            *<label for="reportDate">Report Date:</label>
+            <input required formControlName="reportDate" placeholder="Report Date" name="reportDate" id="reportDate" class="form-control" style="width:250px">
+          </div>
+          <div>
+            <label for="creditScore">Credit Score:</label>
+            <input formControlName="creditScore" placeholder="Credit Score" name="creditScore" id="creditScore" class="form-control" style="width:250px">
+          </div>
+          <div>
+            <label for="outstandingbalance">Outstanding Balance:</label>
+            <input formControlName="outstandingbalance" placeholder="Outstanding Balanace" name="outstandingbalance" id="outstandingbalance" class="form-control" style="width:250px">
+          </div>
+        </td>
+        <td>
+          <div>
+            *<label for="propertyAddress">Property Address:</label>
+            <input required formControlName="propertyAddress" placeholder="Property Address" name="propertyAddress" id="propertyAddress" class="form-control" style="width:250px">
+          </div>
+          <div>
+            *<label for="interestRate">Interest Rate:</label>
+            <input required formControlName="interestRate" placeholder="Interest Rate" name="interestRate" id="interestRate" class="form-control" style="width:250px">
+          </div>
+          <div>
+            *<label for="loanAmount">Loan Amount:</label>
+            <input required formControlName="loanAmount" placeholder="Loan Amount" name="loanAmount" id="loanAmount" class="form-control" style="width:250px">
+          </div>
+          <div>
+            *<label for="loanTerm">Loan Term:</label>
+            <input required formControlName="loanTerm" placeholder="Loan Term" name="loanTerm" id="loanTerm" class="form-control" style="width:250px">
+          </div>
+          <div>
+            *<label for="monthlyPayment">Monthly Payment:</label>
+            <input required formControlName="monthlyPayment" placeholder="Monthly Payment" name="monthlyPayment" id="monthlyPayment" class="form-control" style="width:250px">
+          </div>
+          <p></p>
+          <div>
+            <label name="rulemessages" id="rulemessages" style="color:red"></label>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
